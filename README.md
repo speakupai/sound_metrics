@@ -8,7 +8,16 @@ The files here calculate PESQ and STOI score for originla and processed audio cl
 * pystoi
 * librosa 0.8
 
+## Setup
+To use this implementation locally simply clone the repo
+'''
+git clone https://github.com/speakupai/sound_metrics.git;
+cd sound_metrics;
+'''
+
 ## Usage and Limitations (more updates soon)
-Simply load audio files by changing the path in the test.py file (will be updated to use command line) and execute.
+The file can be run through command line using the following commnads
+
+
 
 The current version can only process audio files with 8khz and 16khz sampling rates.
