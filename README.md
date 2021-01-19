@@ -11,10 +11,10 @@ The files here calculate PESQ and STOI score for originla and processed audio cl
 ## Setup
 To use this implementation locally simply clone the repo
 
-'''
+```
 git clone https://github.com/speakupai/sound_metrics.git;
 cd sound_metrics;
-'''
+```
 
 ## Usage and Limitations (more updates soon)
 The file can be run through command line using the following commnads
