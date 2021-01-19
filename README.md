@@ -18,7 +18,8 @@ cd sound_metrics;
 
 ## Usage and Limitations (more updates soon)
 The file can be run through command line using the following commnads
-
-
+```
+usage: python test.py [-h help] [--original Original_file_path] [--clean Processed_file_path]
+```
 
 The current version can only process audio files with 8khz and 16khz sampling rates.
