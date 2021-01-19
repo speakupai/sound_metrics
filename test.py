@@ -10,7 +10,7 @@ parser.add_argument('--original', required=True,
     help='path to original file')
   
 parser.add_argument('--clean', required=True,
-    help='path to processed/clean file')
+    help='path to processed file')
 
 
 # get arguments back
