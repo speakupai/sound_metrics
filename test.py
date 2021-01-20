@@ -28,5 +28,5 @@ if sr_0 != 16000 or sr_0 != 8000:
     snd_denoise = downsample(snd_denoise)
     sr_0 = 16000
 
-print(type('PESQ: ', pesq_score(snd_orig, snd_denoise, samplerate=16000)))
-print(type('STOI: ', stoi_score(snd_orig, snd_denoise, fs=16000)))
+print('PESQ: ', pesq_score(snd_orig, snd_denoise, samplerate=16000))
+print('STOI: ', stoi_score(snd_orig, snd_denoise, samplerate=16000))

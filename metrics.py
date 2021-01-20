@@ -29,4 +29,4 @@ def stoi_score(y_true: np.array, y_pred: np.array, samplerate=16000, extended=Fa
     Returns:
         float: The stoi score between `y_true` and `y_pred`.
     """
-    return stoi(y_true, y_pred, fs=samplerate, extended=extended)
+    return stoi(y_true, y_pred, fs_sig=samplerate, extended=extended)
