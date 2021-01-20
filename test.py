@@ -25,7 +25,8 @@ snd_denoise, sr_1 = librosa.load(file_clean)
 
 if sr_0 != 16000 or sr_0 != 8000:
     snd_orig = downsample(snd_orig)
-    snd_downsample = downsample(snd_denoise)
+    snd_denoise = downsample(snd_denoise)
+    sr_0 = 16000
 
-print(type('PESQ: ', pesq_score(snd_orig, snd_denoise[:3391270], samplerate=sr_0)))
-print(type('STOI: ', stoi_score(snd_orig, snd_denoise[:3391270], fs=sr_0)))
+print(type('PESQ: ', pesq_score(snd_orig, snd_denoise, samplerate=16000)))
+print(type('STOI: ', stoi_score(snd_orig, snd_denoise, fs=16000)))
