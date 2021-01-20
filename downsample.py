@@ -33,11 +33,9 @@ def downsample(input_file, sample_rate=16000):
   input_file = input file path
   sample_rate = desired sample rate, default=16000
   '''
-  # load audio file
-  x, fs = librosa.load(input_file)
   
   # generate low-res version
-  x_lr = decimate(x, sample_rate)
+  x_lr = decimate(input_file, sample_rate)
   
   return x_lr
 
