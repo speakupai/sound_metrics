@@ -29,4 +29,4 @@ if sr_0 != 16000 or sr_0 != 8000:
     sr_0 = 16000
 
 print('PESQ: ', pesq_score(snd_orig, snd_denoise, samplerate=16000))
-print('STOI: ', stoi_score(snd_orig, snd_denoise, samplerate=16000))
+#print('STOI: ', stoi_score(snd_orig, snd_denoise, samplerate=16000))
