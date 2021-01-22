@@ -20,13 +20,8 @@ file_original=get_inputs['original']
 file_clean=get_inputs['clean']
 
 # load file
-snd_orig, sr_0 = librosa.load(file_original)
-snd_denoise, sr_1 = librosa.load(file_clean)
-
-if sr_0 != 16000 or sr_0 != 8000:
-    snd_orig = downsample(snd_orig)
-    snd_denoise = downsample(snd_denoise)
-    sr_0 = 16000
+snd_orig, sr_0 = librosa.load(file_original, sr=16000)
+snd_denoise, sr_1 = librosa.load(file_clean, sr=16000)
 
 print('PESQ: ', pesq_score(snd_orig, snd_denoise, samplerate=16000))
-#print('STOI: ', stoi_score(snd_orig, snd_denoise, samplerate=16000))
+print('STOI: ', stoi_score(snd_orig, snd_denoise, samplerate=16000))
