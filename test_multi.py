@@ -5,8 +5,8 @@ from downsample import downsample
 
 
 # get file paths
-file_original=input('enter original file path')
-file_clean=input('enter clean file path')
+file_original=input('enter original file path:\n')
+file_clean=input('enter clean file path:\n')
 
 # load file
 snd_orig, sr_0 = librosa.load(file_original, sr=16000)
