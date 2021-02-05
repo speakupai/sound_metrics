@@ -8,10 +8,12 @@ import librosa.display
 import matplotlib.pyplot as plt
 import numpy as np
 import os
+import time
 
 #audio_file=input('enter original file path:\n')
 #audio_file = '/home/taimur/Documents/Online Courses/Fourth Brain/Projects/Audio_super_res/STOI & PESQ/sound_metrics/sample_audio/run 0 only wavenet/f1_script2_ipad_balcony1.wav'
 audio_folder = '/home/taimur/Documents/Online Courses/Fourth Brain/Projects/Audio_super_res/STOI & PESQ/sound_metrics/sample_audio/run 0 only wavenet'
+save_folder = '/home/taimur/Documents/Online Courses/Fourth Brain/Projects/Audio_super_res/STOI & PESQ/sound_metrics/sample_audio/run 0 only wavenet spect'
 
 file_list = os.listdir(audio_folder)
 os.chdir(audio_folder)
@@ -19,7 +21,9 @@ os.chdir(audio_folder)
 
 for fname in file_list:
    # load audio
+   start_time = time.time()
    snd, sr = librosa.load(fname, sr=16000)
+   print(time.time()-start_time)
 
    spect = melspectrogram(y=snd, sr=sr)
    fig, ax = plt.subplots()
@@ -31,6 +35,6 @@ for fname in file_list:
    ax.set(title='Mel-frequency spectrogram')
 
    print(fname[:-4])
-   fig.savefig(fname[:-4], format='png')
+   fig.savefig(os.path.join(save_folder, fname[:-4]+'.png'), format='png')
    
    plt.show()
