@@ -19,7 +19,7 @@ file_list = os.listdir(audio_folder)
 os.chdir(audio_folder)
 
 
-for fname in file_list[:1]:
+for fname in file_list:
    # find duration
    clip_len = librosa.get_duration(filename = fname, sr=16000)
    
